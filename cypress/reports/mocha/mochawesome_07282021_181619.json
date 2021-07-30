@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-07-28T21:16:11.775Z",
+    "end": "2021-07-28T21:16:19.281Z",
+    "duration": 7506,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "43b99fc9-8da4-444c-a19b-08e013825a03",
+      "title": "",
+      "fullFile": "cypress/integration/1-CriarNewPerfil_test.spec.js",
+      "file": "cypress/integration/1-CriarNewPerfil_test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0c6e074c-3272-4247-9dc5-70b7bfcba21b",
+          "title": "Novo Usuario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Criar Perfil Novo",
+              "fullTitle": "Novo Usuario Criar Perfil Novo",
+              "timedOut": null,
+              "duration": 7449,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "//const login = \"Kursonln\"\n//const email = \"Kursonln@yahoo.com\"\n// const login = \"Kalasha66\"\n//  const email = \"Kalasha66@gmail.com\"\n//   const password = \"91563815\"      \nvar login = \"LonnaMark\";\nvar email = \"LonnaMark@gmail.com\";\nvar password = \"91563815\";\ncy.xpath('//input[@name=\"Usuario\"]').type(login);\ncy.xpath('//input[@name=\"Email\"]').type(email);\ncy.xpath('//input[@name=\"Senha\"]').type(password);\ncy.xpath('//button[@type=\"button\"][contains(.,\"Prosseguir\")]').click();\ncy.xpath('//input[@type=\"submit\"]').click();\ncy.contains('Editar Perfil'); //Foto do perfil\ncy.xpath('//a[contains(.,\"Avatar\")]').click();\ncy.xpath('//input[contains(@id,\"fupUsuarioAvatar\")]').as('fileInput').attachFile('Imagem3.png');\ncy.xpath('//input[@value=\"Enviar Avatar\"]').click();\ncy.contains('Avatar enviado com sucesso!').should('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Editar Perfil' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Editar Perfil' but never did.\n    at Context.eval (https://www.spiritfanfiction.com/__cypress/tests?p=cypress/integration/1-CriarNewPerfil_test.spec.js:7288:8)",
+                "diff": null
+              },
+              "uuid": "60d3a7fa-1840-4846-9037-76a4384a7f54",
+              "parentUUID": "0c6e074c-3272-4247-9dc5-70b7bfcba21b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "60d3a7fa-1840-4846-9037-76a4384a7f54"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7449,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "waitForAnimations": false,
+        "animationDistanceThreshold": 50,
+        "projectId": "suf2ua"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

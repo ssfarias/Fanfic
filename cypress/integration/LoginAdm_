@@ -1,0 +1,17 @@
+const { describe } = require("mocha");
+
+describe("Fazer Login", () => {
+    beforeEach(() => cy.visit("https://www.spiritfanfiction.com/login"));
+  
+    it("Fazer Login Adm", () => {
+        const login = "silvafar@gmail.com"
+        const password = "91563815"
+
+        cy.xpath('//input[@name="Usuario"]').type(login);
+        cy.xpath('//input[@name="Senha"]').type(password);
+
+        cy.xpath('//button[@type="button"][contains(.,"Prosseguir")]').click();       
+        cy.xpath('//input[@type="submit"]').click();
+        cy.contains('Spirit Fanfics');
+    })  
+});

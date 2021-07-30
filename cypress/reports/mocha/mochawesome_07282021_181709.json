@@ -1,0 +1,113 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-07-28T21:16:26.761Z",
+    "end": "2021-07-28T21:17:09.529Z",
+    "duration": 42768,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "faf51adb-59c6-40a6-98f0-48ec37271968",
+      "title": "",
+      "fullFile": "cypress/integration/2-AcessaFanfic_test.spec.js",
+      "file": "cypress/integration/2-AcessaFanfic_test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9b9746c2-d57f-4227-83d3-1736ea1b52f4",
+          "title": "Acessar Fanfic",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar Fanfic",
+              "fullTitle": "Acessar Fanfic Acessar Fanfic",
+              "timedOut": null,
+              "duration": 42672,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var login = \"LonnaMark\";\nvar password = \"91563815\";\ncy.xpath('//input[@name=\"Usuario\"]').type(login);\ncy.xpath('//input[@name=\"Senha\"]').type(password);\ncy.xpath('//button[@type=\"button\"][contains(.,\"Prosseguir\")]').click();\ncy.xpath('//input[@type=\"submit\"]').click();\ncy.xpath('(//a[contains(.,\"Categorias\")])[1]').click();\ncy.contains('Séries, Novelas & TV').click();\ncy.xpath('//a[contains(@title,\"Letra G\")]').click();\ncy.xpath('//strong[contains(.,\"Glee\")]').click();\ncy.xpath('//a[contains(.,\"Halfway there was love\")]').click();\ncy.contains('Continuar visualizando').click(); //cy.xpath('//span[contains(.,\"Adicionar aos Favoritos\")]').click({force: true});\ncy.xpath('//strong[contains(.,\"Prefácio\")]').click({\n  multiple: true,\n  force: true\n}).should('have.attr', 'Capítulo 1 - Prefácio'); //cy.contains('Capítulo 1 - Prefácio').should('be.visible');\ncy.xpath('//a[@href=\"https://www.spiritfanfiction.com/historia/halfway-there-was-love-22195341\"]').click();\n({\n  force: true\n});\ncy.xpath('//strong[contains(.,\"The new top Model\")]').click(); //a[@href='https://www.spiritfanfiction.com/historia/halfway-there-was-love-22195341'][contains(.,'Halfway there was love')])[2]\ncy.get('button').click({\n  multiple: true,\n  force: true\n}).should('have.attr', 'href');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.should()` failed because this element is detached from the DOM.\n\n`<strong>Prefácio</strong>`\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > `cy.xpath()`\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.should()` failed because this element is detached from the DOM.\n\n`<strong>Prefácio</strong>`\n\nCypress requires elements be attached in the DOM to interact with them.\n\nThe previous command that ran was:\n\n  > `cy.xpath()`\n\nThis DOM element likely became detached somewhere between the previous and current command.\n\nCommon situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou typically need to re-query for the element or add 'guards' which delay Cypress from running new commands.\n\nhttps://on.cypress.io/element-has-detached-from-dom\n    at $Cy.ensureAttached (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:162522:24)\n    at applyChainers (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:155957:12)\n    at tryCatcher (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:10765:23)\n    at Function.Promise.attempt.Promise.try (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:8039:29)\n    at Context.shouldFn (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:155989:23)\n    at Context.should (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:156007:23)\n    at https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:151712:39\n    at assertions (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:151964:14)\n    at tryCatcher (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:10765:23)\n    at Object.gotValue (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:9909:18)\n    at Object.gotAccum (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:9896:25)\n    at Object.tryCatcher (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:10765:23)\n    at Promise._settlePromiseFromHandler (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:8700:31)\n    at Promise._settlePromise (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:8757:18)\n    at Promise._settlePromiseCtx (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:8794:10)\n    at _drainQueueStep (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:5476:12)\nFrom Your Spec Code:\n    at Context.eval (https://www.spiritfanfiction.com/__cypress/tests?p=cypress/integration/2-AcessaFanfic_test.spec.js:7291:8)",
+                "diff": null
+              },
+              "uuid": "bc491309-f5ef-4b83-a3f3-61ecbab4038b",
+              "parentUUID": "9b9746c2-d57f-4227-83d3-1736ea1b52f4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bc491309-f5ef-4b83-a3f3-61ecbab4038b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 42672,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "waitForAnimations": false,
+        "animationDistanceThreshold": 50,
+        "projectId": "suf2ua"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

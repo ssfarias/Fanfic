@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-28T21:17:21.957Z",
+    "end": "2021-07-28T21:17:50.367Z",
+    "duration": 28410,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "67e9963e-4c6d-4a54-9f50-967ddaf6c6bb",
+      "title": "",
+      "fullFile": "cypress/integration/3-CapituloAtual_test.spec.js",
+      "file": "cypress/integration/3-CapituloAtual_test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c214ebc5-0311-4f04-8e4a-880870f120ba",
+          "title": "Acessar Capitulo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar capítulo Atual",
+              "fullTitle": "Acessar Capitulo Acessar capítulo Atual",
+              "timedOut": null,
+              "duration": 28310,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var login = \"LonnaMark\";\nvar password = \"91563815\"; //const login = \"Kurson_ln\"\n//const password = \"91563815\"\ncy.xpath('//input[@name=\"Usuario\"]').type(login);\ncy.xpath('//input[@name=\"Senha\"]').type(password);\ncy.xpath('//button[@type=\"button\"][contains(.,\"Prosseguir\")]').click();\ncy.xpath('//input[@type=\"submit\"]').click();\ncy.xpath('(//a[contains(.,\"Categorias\")])[1]').click();\ncy.contains('Séries, Novelas & TV').click();\ncy.xpath('//a[contains(@title,\"Letra G\")]').click();\ncy.xpath('//strong[contains(.,\"Glee\")]').click();\ncy.xpath('//a[contains(.,\"Halfway there was love\")]').click();\ncy.contains('Continuar visualizando').click();\ncy.xpath('//span[contains(.,\"Adicionar aos Favoritos\")]').click({\n  force: true\n});\ncy.xpath('//strong[contains(.,\"A volta por cima de Blaine\")]').click();\ncy.contains('O falso modelo').should('be.visible');",
+              "err": {},
+              "uuid": "b3d408fd-f998-4f63-b19a-377816318026",
+              "parentUUID": "c214ebc5-0311-4f04-8e4a-880870f120ba",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b3d408fd-f998-4f63-b19a-377816318026"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28310,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "waitForAnimations": false,
+        "animationDistanceThreshold": 50,
+        "projectId": "suf2ua"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-30T02:05:11.519Z",
+    "end": "2021-07-30T02:07:03.515Z",
+    "duration": 111996,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "efaf4382-65bb-4d0b-a284-8adc506c23d0",
+      "title": "",
+      "fullFile": "cypress/integration/2-Capitulo_test.spec.js",
+      "file": "cypress/integration/2-Capitulo_test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "517d8fe2-84f9-40da-9f80-7b388e55b56c",
+          "title": "Fanfic",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar capitulos",
+              "fullTitle": "Fanfic Acessar capitulos",
+              "timedOut": null,
+              "duration": 111533,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var user = {\n  login: 'LitaRumo',\n  password: '91563815'\n};\ncy.goSite();\ncy.login(user.login, user.password);\ncy.acessar_fanfic();\ncy.acessar_capitulos();\nvar numberOfAbTests = 20;\nfor (var i = 1; i <= numberOfAbTests; i += 1) {\n  cy.xpath('(//td[contains(.,\"' + i + '\")])[2]').click();\n  cy.xpath('(//strong[contains(.,\"Halfway there was love\")])[1]').click();\n  cy.xpath('//span[contains(.,\"Halfway there was love\")]').should('be.visible');\n}",
+              "err": {},
+              "uuid": "81c2d814-9aee-4758-b572-9412e303e205",
+              "parentUUID": "517d8fe2-84f9-40da-9f80-7b388e55b56c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "81c2d814-9aee-4758-b572-9412e303e205"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 111533,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "waitForAnimations": false,
+        "animationDistanceThreshold": 50
+      },
+      "version": "5.2.0"
+    }
+  }
+}

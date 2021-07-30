@@ -1,0 +1,287 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-07-08T13:45:15.865Z",
+    "end": "2021-07-08T13:46:54.496Z",
+    "duration": 81538,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fc824fef-c107-4b20-a048-c5c7c5793f03",
+      "title": "",
+      "fullFile": "cypress/integration/1-CriarNewPerfil_test.spec.js",
+      "file": "cypress/integration/1-CriarNewPerfil_test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bb865137-3347-4c40-8fbc-33af0439b072",
+          "title": "Novo Usuario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Criar Perfil Novo",
+              "fullTitle": "Novo Usuario Criar Perfil Novo",
+              "timedOut": null,
+              "duration": 7729,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//const login = \"Kursonln\"\n//const email = \"Kursonln@yahoo.com\"\n// const login = \"Kalasha66\"\n//  const email = \"Kalasha66@gmail.com\"\n//   const password = \"91563815\"      \nvar login = \"LonnaMark\";\nvar email = \"LonnaMark@gmail.com\";\nvar password = \"91563815\";\ncy.xpath('//input[@name=\"Usuario\"]').type(login);\ncy.xpath('//input[@name=\"Email\"]').type(email);\ncy.xpath('//input[@name=\"Senha\"]').type(password);\ncy.xpath('//button[@type=\"button\"][contains(.,\"Prosseguir\")]').click();\ncy.xpath('//input[@type=\"submit\"]').click();\ncy.contains('Editar Perfil'); //Foto do perfil\ncy.xpath('//a[contains(.,\"Avatar\")]').click();\ncy.xpath('//input[contains(@id,\"fupUsuarioAvatar\")]').as('fileInput').attachFile('Imagem3.png');\ncy.xpath('//input[@value=\"Enviar Avatar\"]').click();\ncy.contains('Avatar enviado com sucesso!').should('be.visible');",
+              "err": {},
+              "uuid": "c9a9b791-9767-4d3c-931c-6fcbb11c1a8c",
+              "parentUUID": "bb865137-3347-4c40-8fbc-33af0439b072",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c9a9b791-9767-4d3c-931c-6fcbb11c1a8c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7729,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "48d50868-12d9-409c-9c98-d1271a038ac7",
+      "title": "",
+      "fullFile": "cypress/integration/2-AcessaFanfic_test.spec.js",
+      "file": "cypress/integration/2-AcessaFanfic_test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bd65a5f5-d870-4b30-8f5c-8bd8b3ddff7d",
+          "title": "Acessar Fanfic",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar Fanfic",
+              "fullTitle": "Acessar Fanfic Acessar Fanfic",
+              "timedOut": null,
+              "duration": 52916,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var login = \"Kurson_ln\";\nvar password = \"91563815\";\ncy.xpath('//input[@name=\"Usuario\"]').type(login);\ncy.xpath('//input[@name=\"Senha\"]').type(password);\ncy.xpath('//button[@type=\"button\"][contains(.,\"Prosseguir\")]').click();\ncy.xpath('//input[@type=\"submit\"]').click();\ncy.xpath('(//a[contains(.,\"Categorias\")])[1]').click();\ncy.contains('Séries, Novelas & TV').click();\ncy.xpath('//a[contains(@title,\"Letra G\")]').click();\ncy.xpath('//strong[contains(.,\"Glee\")]').click();\ncy.xpath('//a[contains(.,\"Halfway there was love\")]').click();\ncy.contains('Continuar visualizando').click(); //cy.xpath('//span[contains(.,\"Adicionar aos Favoritos\")]').click({force: true});        \n/// cy.xpath('//strong[contains(.,\"Prefácio\")]').click();  \ncy.xpath('//strong[contains(.,\"A volta por cima de Blaine\")]').click();\ncy.xpath('//div[contains(@class,\"fnp-nav-link\")]').click({\n  force: true\n});",
+              "err": {
+                "message": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click",
+                "estack": "CypressError: `cy.click()` can only be called on a single element. Your subject contained 2 elements. Pass `{ multiple: true }` if you want to serially click each element.\n\nhttps://on.cypress.io/click\n    at mouseAction (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:153279:17)\n    at Context.click (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:153453:14)\n    at Context.<anonymous> (https://www.spiritfanfiction.com/__cypress/runner/cypress_runner.js:171468:21)\nFrom Your Spec Code:\n    at Context.eval (https://www.spiritfanfiction.com/__cypress/tests?p=cypress/integration/2-AcessaFanfic_test.spec.js:7290:56)",
+                "diff": null
+              },
+              "uuid": "f1c7c6d4-726c-4bc4-9098-9003fd6543df",
+              "parentUUID": "bd65a5f5-d870-4b30-8f5c-8bd8b3ddff7d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "f1c7c6d4-726c-4bc4-9098-9003fd6543df"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 52916,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "47712caa-05c9-40e4-92dc-cbe129d22488",
+      "title": "",
+      "fullFile": "cypress/integration/3-CapituloAtual_test.spec.js",
+      "file": "cypress/integration/3-CapituloAtual_test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9be3cacc-6286-4f6e-9689-7a45db18ee3a",
+          "title": "Acessar Capitulo",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Acessar capítulo Atual",
+              "fullTitle": "Acessar Capitulo Acessar capítulo Atual",
+              "timedOut": null,
+              "duration": 15431,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var login = \"LonnaMark\";\nvar password = \"91563815\"; //const login = \"Kurson_ln\"\n//const password = \"91563815\"\ncy.xpath('//input[@name=\"Usuario\"]').type(login);\ncy.xpath('//input[@name=\"Senha\"]').type(password);\ncy.xpath('//button[@type=\"button\"][contains(.,\"Prosseguir\")]').click();\ncy.xpath('//input[@type=\"submit\"]').click();\ncy.xpath('(//a[contains(.,\"Categorias\")])[1]').click();\ncy.contains('Séries, Novelas & TV').click();\ncy.xpath('//a[contains(@title,\"Letra G\")]').click();\ncy.xpath('//strong[contains(.,\"Glee\")]').click();\ncy.xpath('//a[contains(.,\"Halfway there was love\")]').click();\ncy.contains('Continuar visualizando').click();\ncy.xpath('//span[contains(.,\"Adicionar aos Favoritos\")]').click({\n  force: true\n});\ncy.xpath('//strong[contains(.,\"A volta por cima de Blaine\")]').click();\ncy.contains('O falso modelo').should('be.visible');",
+              "err": {},
+              "uuid": "13659293-d7a2-4ddb-aad0-7455d6ee73f3",
+              "parentUUID": "9be3cacc-6286-4f6e-9689-7a45db18ee3a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "13659293-d7a2-4ddb-aad0-7455d6ee73f3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15431,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "ef16c185-5fe2-4dad-adc0-c3b23c38c9cc",
+      "title": "",
+      "fullFile": "cypress/integration/4-DeleteUser_test.spec.js",
+      "file": "cypress/integration/4-DeleteUser_test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dcb0982a-480b-4a9a-901e-001c27c466e5",
+          "title": "Deletar Usuario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Delete User",
+              "fullTitle": "Deletar Usuario Delete User",
+              "timedOut": null,
+              "duration": 5462,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var login = \"LonnaMark@gmail.com\";\nvar password = \"91563815\";\ncy.xpath('//input[@name=\"Usuario\"]').type(login);\ncy.xpath('//input[@name=\"Senha\"]').type(password);\ncy.xpath('//button[@type=\"button\"][contains(.,\"Prosseguir\")]').click();\ncy.xpath('//input[@type=\"submit\"]').click();\ncy.contains('Spirit Fanfics');\ncy.xpath('//div[contains(@class,\"line-wrap\")]').click({\n  force: true\n});\ncy.xpath('//a[contains(@class,\"gear\")]').click({\n  force: true\n});\ncy.xpath('//a[contains(.,\"Apagar Conta\")]').click({\n  force: true\n});\ncy.xpath('//input[@name=\"ApagarSenha\"]').type(password);\ncy.xpath('//input[@name=\"ApagarConfirmar\"]').click();\ncy.contains('Usuário Excluído com sucesso').should('be.visible');",
+              "err": {},
+              "uuid": "2a4206ed-73ad-417e-af40-cb70a2b826bf",
+              "parentUUID": "dcb0982a-480b-4a9a-901e-001c27c466e5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2a4206ed-73ad-417e-af40-cb70a2b826bf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5462,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "waitForAnimations": false,
+        "animationDistanceThreshold": 50,
+        "projectId": "suf2ua"
+      },
+      "version": "5.2.0"
+    }
+  }
+}

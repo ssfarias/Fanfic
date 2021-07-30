@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-28T21:18:00.731Z",
+    "end": "2021-07-28T21:18:12.071Z",
+    "duration": 11340,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "719f957a-8e9d-45e9-8055-6be285db64a9",
+      "title": "",
+      "fullFile": "cypress/integration/4-DeleteUser_test.spec.js",
+      "file": "cypress/integration/4-DeleteUser_test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "226222e8-9c60-4a67-8a95-5f55efef61fa",
+          "title": "Deletar Usuario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Delete User",
+              "fullTitle": "Deletar Usuario Delete User",
+              "timedOut": null,
+              "duration": 11269,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var login = \"LonnaMark@gmail.com\";\nvar password = \"91563815\";\ncy.xpath('//input[@name=\"Usuario\"]').type(login);\ncy.xpath('//input[@name=\"Senha\"]').type(password);\ncy.xpath('//button[@type=\"button\"][contains(.,\"Prosseguir\")]').click();\ncy.xpath('//input[@type=\"submit\"]').click();\ncy.contains('Spirit Fanfics');\ncy.xpath('//div[contains(@class,\"line-wrap\")]').click({\n  force: true\n});\ncy.xpath('//a[contains(@class,\"gear\")]').click({\n  force: true\n});\ncy.xpath('//a[contains(.,\"Apagar Conta\")]').click({\n  force: true\n});\ncy.xpath('//input[@name=\"ApagarSenha\"]').type(password);\ncy.xpath('//input[@name=\"ApagarConfirmar\"]').click();\ncy.contains('Usuário Excluído com sucesso').should('be.visible');",
+              "err": {},
+              "uuid": "a37c4547-4cca-4e44-b31d-fe899924f846",
+              "parentUUID": "226222e8-9c60-4a67-8a95-5f55efef61fa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a37c4547-4cca-4e44-b31d-fe899924f846"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11269,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/mocha",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss",
+        "waitForAnimations": false,
+        "animationDistanceThreshold": 50,
+        "projectId": "suf2ua"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
